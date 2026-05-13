@@ -1,2 +1,221 @@
-<link rel="stylesheet" href="css/style.css">
-<script src="js/script.js"></script>
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <title>Research Portfolio</title>
+
+  <!-- CSS読み込み -->
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+
+<body>
+  <header class="topbar">
+    <nav class="nav">
+      <a class="brand" href="#top">Research Portfolio</a>
+
+      <div class="nav-links">
+        <a href="#about">About</a>
+        <a href="#research">Research</a>
+        <a href="#highlights">Highlights</a>
+        <a href="#contact">Contact</a>
+      </div>
+    </nav>
+  </header>
+
+  <main id="top">
+    <!-- Hero -->
+    <section class="hero">
+      <div>
+        <div class="eyebrow">Research Introduction</div>
+
+        <h1>
+          Ideas,<br />
+          made visible.
+        </h1>
+
+        <p class="hero-copy">
+          ここに研究テーマの一文要約を書きます。
+          研究の目的、社会的な意義、どんな技術で挑んでいるのかを、
+          短く力強く見せる領域です。
+        </p>
+
+        <div class="hero-actions">
+          <a class="button button-primary" href="#research">研究を見る</a>
+          <a class="button button-secondary" href="#contact">連絡先</a>
+        </div>
+      </div>
+
+      <div class="visual" aria-label="研究ビジュアルの抽象表現">
+        <div class="floating-card">
+          <p>Current Focus</p>
+          <strong>複雑な現象を、設計に使える知識へ。</strong>
+        </div>
+      </div>
+    </section>
+
+    <!-- About -->
+    <section class="section" id="about">
+      <h2 class="section-title">About</h2>
+
+      <p class="section-lead">
+        研究背景、所属、専門分野を紹介します。
+        Apple風の見せ方では、説明を詰め込みすぎず、
+        重要な言葉だけを残すのが効きます。
+      </p>
+
+      <div class="grid-3">
+        <article class="card">
+          <span class="num">01</span>
+          <h3>専門</h3>
+          <p>
+            例：ビーム制御、数値解析、実験計測など。
+            自分の研究を支える柱を書きます。
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="num">02</span>
+          <h3>目的</h3>
+          <p>
+            何を明らかにしたいのか。
+            学術的な問いと工学的な狙いを簡潔に示します。
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="num">03</span>
+          <h3>方法</h3>
+          <p>
+            理論、計算、実験などのアプローチを整理して見せます。
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Research -->
+    <section class="section" id="research">
+      <div class="split">
+        <div class="panel">
+          <h2 class="section-title">Research</h2>
+
+          <p class="section-lead research-lead">
+            現在取り組んでいる研究テーマを、
+            読み手が一瞬で理解できるように配置します。
+          </p>
+
+          <div class="metric-list">
+            <div class="metric">
+              <strong>01</strong>
+              <span>主題となる研究テーマ</span>
+            </div>
+
+            <div class="metric">
+              <strong>02</strong>
+              <span>解決したい課題</span>
+            </div>
+
+            <div class="metric">
+              <strong>03</strong>
+              <span>提案する新しさ</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel">
+          <div class="timeline">
+            <article class="timeline-item">
+              <time>Theme 01</time>
+              <h3>研究テーマ A</h3>
+              <p>
+                背景、問題設定、アプローチ、
+                得られた知見を2〜3文でまとめます。
+              </p>
+            </article>
+
+            <article class="timeline-item">
+              <time>Theme 02</time>
+              <h3>研究テーマ B</h3>
+              <p>
+                別の研究項目や、
+                今後展開したい内容をここに載せます。
+              </p>
+            </article>
+
+            <article class="timeline-item">
+              <time>Theme 03</time>
+              <h3>研究テーマ C</h3>
+              <p>
+                論文、発表、共同研究などに接続する内容を入れても自然です。
+              </p>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Highlights -->
+    <section class="section" id="highlights">
+      <h2 class="section-title">Highlights</h2>
+
+      <p class="section-lead">
+        実績や成果をカードで見せます。
+        数字があると強いですが、意味も添えるとさらに伝わります。
+      </p>
+
+      <div class="grid-3">
+        <article class="card">
+          <span class="num">Publication</span>
+          <h3>論文・発表</h3>
+          <p>
+            主要な業績、学会発表、受賞などをまとめます。
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="num">Project</span>
+          <h3>研究プロジェクト</h3>
+          <p>
+            共同研究、開発中の装置、解析コードなどを紹介します。
+          </p>
+        </article>
+
+        <article class="card">
+          <span class="num">Future</span>
+          <h3>今後の展望</h3>
+          <p>
+            次に取り組む課題や、
+            研究の社会的な広がりを記述します。
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- Contact -->
+    <section class="section contact" id="contact">
+      <div class="contact-box">
+        <h2 class="section-title contact-title">Let’s connect.</h2>
+
+        <p>
+          共同研究、発表依頼、研究内容に関する問い合わせ先を記載します。
+        </p>
+
+        <a
+          class="button button-primary"
+          href="mailto:your-email@example.com"
+        >
+          メールを送る
+        </a>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    © 2026 Your Name. All rights reserved.
+  </footer>
+
+  <!-- JavaScript読み込み -->
+  <script src="js/script.js"></script>
+</body>
+</html>

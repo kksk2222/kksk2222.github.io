@@ -387,7 +387,18 @@ h1 {
 .research-lead {
   margin-bottom: 0;
 }
+.research-heading {
+  padding-top: 12px;
+}
 
+.research-heading .section-title {
+  margin-bottom: 22px;
+}
+
+.research-heading .section-lead {
+  max-width: 360px;
+  margin-bottom: 0;
+}
 /* =========================================
    Cards
 ========================================= */
@@ -444,9 +455,9 @@ h1 {
 
 .split {
   display: grid;
-  grid-template-columns: 0.95fr 1.05fr;
-  gap: 24px;
-  align-items: stretch;
+  grid-template-columns: 0.78fr 1.22fr;
+  gap: 48px;
+  align-items: start;
 }
 
 .panel {

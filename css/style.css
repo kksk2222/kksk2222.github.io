@@ -452,12 +452,24 @@ h1 {
 /* =========================================
    Research Split Layout
 ========================================= */
-
 .split {
   display: grid;
   grid-template-columns: 0.78fr 1.22fr;
   gap: 48px;
   align-items: start;
+}
+
+.research-heading {
+  padding-top: 12px;
+}
+
+.research-heading .section-title {
+  margin-bottom: 22px;
+}
+
+.research-heading .section-lead {
+  max-width: 360px;
+  margin-bottom: 0;
 }
 
 .panel {

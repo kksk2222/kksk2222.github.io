@@ -511,3 +511,153 @@ footer {
     padding: 24px;
   }
 }
+
+/* =========================================
+   Apple-style Hero Image Animation
+========================================= */
+
+.hero-image-stage {
+  position: relative;
+  min-height: 560px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  perspective: 1200px;
+}
+
+.hero-image-glow {
+  position: absolute;
+  width: 90%;
+  height: 80%;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle,
+      rgba(41, 151, 255, 0.35) 0%,
+      rgba(41, 151, 255, 0.14) 38%,
+      transparent 72%
+    );
+  filter: blur(28px);
+  opacity: 0.9;
+  transform: translateY(12px);
+  pointer-events: none;
+}
+
+.hero-image-frame {
+  position: relative;
+  width: min(100%, 520px);
+  aspect-ratio: 4 / 5;
+  border-radius: 42px;
+  overflow: hidden;
+
+  border: 1px solid rgba(255, 255, 255, 0.18);
+
+  background: rgba(255, 255, 255, 0.06);
+
+  box-shadow:
+    0 40px 100px rgba(0, 0, 0, 0.60),
+    0 0 80px rgba(41, 151, 255, 0.18),
+    inset 0 1px 0 rgba(255, 255, 255, 0.18);
+
+  transform:
+    translateY(40px)
+    scale(0.92)
+    rotateX(8deg);
+
+  opacity: 0;
+  filter: blur(12px);
+
+  transition:
+    opacity 1.2s ease,
+    transform 1.4s cubic-bezier(0.22, 1, 0.36, 1),
+    filter 1.2s ease;
+
+  will-change: transform, opacity, filter;
+}
+
+.hero-image-frame.is-visible {
+  opacity: 1;
+  filter: blur(0);
+  transform:
+    translateY(0)
+    scale(1)
+    rotateX(0deg);
+}
+
+.hero-image-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      125deg,
+      rgba(255, 255, 255, 0.22) 0%,
+      rgba(255, 255, 255, 0.06) 18%,
+      transparent 42%,
+      transparent 68%,
+      rgba(255, 255, 255, 0.08) 100%
+    );
+
+  mix-blend-mode: screen;
+}
+
+.hero-image-frame::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  z-index: 2;
+  pointer-events: none;
+
+  background:
+    linear-gradient(
+      180deg,
+      rgba(255, 255, 255, 0.10) 0%,
+      transparent 28%,
+      transparent 74%,
+      rgba(0, 0, 0, 0.28) 100%
+    );
+}
+
+.hero-image {
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: cover;
+
+  transform: scale(1.08);
+  transition: transform 0.25s ease-out;
+
+  will-change: transform;
+}
+
+.image-caption {
+  left: 18px;
+  right: 18px;
+  bottom: 18px;
+  z-index: 3;
+}
+
+/* レスポンシブ */
+@media (max-width: 980px) {
+  .hero-image-stage {
+    min-height: 520px;
+  }
+
+  .hero-image-frame {
+    width: min(100%, 480px);
+  }
+}
+
+@media (max-width: 720px) {
+  .hero-image-stage {
+    min-height: 440px;
+  }
+
+  .hero-image-frame {
+    width: min(100%, 360px);
+    border-radius: 32px;
+  }
+}

@@ -495,13 +495,15 @@ h1 {
   margin-top: 22px;
 
   width: 100%;
-  max-width: 560px;
+  max-width: 520px;
   margin-left: auto;
   margin-right: auto;
 }
 
 .timeline-item {
-  padding: 20px;
+  width: 100%;
+
+  padding: 22px 24px;
   border-radius: 24px;
   border: 1px solid var(--line);
   background: rgba(255, 255, 255, 0.04);
